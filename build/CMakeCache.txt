@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
 //Dependencies for target
 CJO_LIB_DEPENDS:STATIC=
 
@@ -182,6 +188,9 @@ HELLO_BINARY_DIR:STATIC=/home/junlinz/VSC_project/2/build
 //Value Computed by CMake
 HELLO_SOURCE_DIR:STATIC=/home/junlinz/VSC_project/2
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/opt/ros/kinetic/share/OpenCV-3.3.1-dev
+
 //The directory containing a CMake configuration file for Pangolin.
 Pangolin_DIR:PATH=/home/junlinz/Documents/Pangolin/build/src
 
@@ -205,6 +214,10 @@ foo_LIB_DEPENDS:STATIC=
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -330,4 +343,16 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/ros/kinetic][v3.3.1()]
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+//Last used Boost_USE_STATIC_LIBS value.
+_Boost_USE_STATIC_LIBS_LAST:INTERNAL=ON
 

@@ -11,10 +11,13 @@ set(CMAKE_C_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
+  "../Json"
+  "../config"
   "/home/junlinz/Documents/Pangolin/include"
   "/home/junlinz/Documents/Pangolin/build/src/include"
   "/usr/include/eigen3"
-  "../Json"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
   )
 
 # Targets to which this target links.

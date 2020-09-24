@@ -1,0 +1,18 @@
+{
+    "robot":{
+        "position":{
+            "X":1,
+            "Y":2,
+            "Z":3
+        },
+        "angular":{
+            "pitch":4,
+            "yaw":5,
+            "roll":6
+        },
+        "linear_velocity":[7,8,9],
+        "angular_velocity":[10,11,12],
+        "linear_acceleration":[13,14,15],
+        "angular_acceleration":[16,17,18]
+    }
+}

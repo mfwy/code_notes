@@ -1,0 +1,17 @@
+%YAML:1.0
+---
+model_type: pinhole
+fx: 640.
+fy: 480.
+cx: 320.
+cy: 240.
+intrinc matrix: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [ 1., 0., 0., 1., 0., 1., 0., 1., 0., 0., 1., 1. ]
+count:
+   - one
+   - two
+   - three
+frequence: 30

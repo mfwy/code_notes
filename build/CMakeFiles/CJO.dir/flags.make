@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC   -std=c++11
 
 CXX_DEFINES = -DCJO_EXPORTS
 
-CXX_INCLUDES = -I/home/junlinz/VSC_project/2/include -I/home/junlinz/Documents/Pangolin/include -I/home/junlinz/Documents/Pangolin/build/src/include -I/usr/include/eigen3 -I/home/junlinz/VSC_project/2/Json 
+CXX_INCLUDES = -I/home/junlinz/VSC_project/2/include -I/home/junlinz/VSC_project/2/Json -I/home/junlinz/VSC_project/2/config -I/home/junlinz/Documents/Pangolin/include -I/home/junlinz/Documents/Pangolin/build/src/include -I/usr/include/eigen3 -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv 
 
