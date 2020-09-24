@@ -1,0 +1,1 @@
+/usr/bin/g++-5  -fPIC -g  -shared -Wl,-soname,libCJO.so -o libCJO.so CMakeFiles/CJO.dir/Json/CJsonObject.cpp.o 

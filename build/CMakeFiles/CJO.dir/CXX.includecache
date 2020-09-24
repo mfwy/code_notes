@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/junlinz/VSC_project/2/Json/CJsonObject.cpp
+CJsonObject.hpp
+/home/junlinz/VSC_project/2/Json/CJsonObject.hpp
+
+/home/junlinz/VSC_project/2/Json/CJsonObject.hpp
+stdio.h
+-
+stddef.h
+-
+malloc.h
+-
+errno.h
+-
+limits.h
+-
+math.h
+-
+string
+-
+map
+-
+list
+-
+cJSON.h
+/home/junlinz/VSC_project/2/Json/cJSON.h
+
+/home/junlinz/VSC_project/2/Json/cJSON.h
+stdint.h
+-
+

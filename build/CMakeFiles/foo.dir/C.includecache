@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/junlinz/VSC_project/2/lib/foo.c
+iostream
+-
+foo.h
+/home/junlinz/VSC_project/2/lib/foo.h
+

@@ -1,0 +1,1 @@
+/usr/bin/g++-5  -fPIC -g  -shared -Wl,-soname,libfoo.so -o libfoo.so CMakeFiles/foo.dir/lib/foo.cpp.o 

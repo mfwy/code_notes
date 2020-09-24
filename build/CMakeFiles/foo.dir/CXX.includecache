@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/foo.h
+iostream
+-
+
+/home/junlinz/VSC_project/2/lib/foo.cpp
+iostream
+-
+foo.h
+/home/junlinz/VSC_project/2/lib/foo.h
+

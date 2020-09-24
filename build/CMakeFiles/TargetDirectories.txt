@@ -1,0 +1,6 @@
+/home/junlinz/VSC_project/2/build/CMakeFiles/edit_cache.dir
+/home/junlinz/VSC_project/2/build/CMakeFiles/rebuild_cache.dir
+/home/junlinz/VSC_project/2/build/CMakeFiles/CJson.dir
+/home/junlinz/VSC_project/2/build/CMakeFiles/drawer.dir
+/home/junlinz/VSC_project/2/build/CMakeFiles/CJO.dir
+/home/junlinz/VSC_project/2/build/CMakeFiles/main.dir
