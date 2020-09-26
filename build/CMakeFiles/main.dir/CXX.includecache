@@ -96,6 +96,10 @@ iostream
 sstream
 -
 
+../include/templateapp.h
+iostream
+-
+
 /home/junlinz/Documents/Pangolin/build/src/include/pangolin/config.h
 
 /home/junlinz/Documents/Pangolin/include/pangolin/compat/type_traits.h
@@ -824,6 +828,8 @@ netinet/in.h
 arpa/inet.h
 -
 AddServer.h
+-
+templateapp.h
 -
 
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h

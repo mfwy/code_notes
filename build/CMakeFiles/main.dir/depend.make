@@ -8,6 +8,7 @@ CMakeFiles/main.dir/src/main.cpp.o: ../include/Drawer.h
 CMakeFiles/main.dir/src/main.cpp.o: ../include/Param.h
 CMakeFiles/main.dir/src/main.cpp.o: ../include/config.h
 CMakeFiles/main.dir/src/main.cpp.o: ../include/ser.h
+CMakeFiles/main.dir/src/main.cpp.o: ../include/templateapp.h
 CMakeFiles/main.dir/src/main.cpp.o: /home/junlinz/Documents/Pangolin/build/src/include/pangolin/config.h
 CMakeFiles/main.dir/src/main.cpp.o: /home/junlinz/Documents/Pangolin/include/pangolin/compat/type_traits.h
 CMakeFiles/main.dir/src/main.cpp.o: /home/junlinz/Documents/Pangolin/include/pangolin/display/attach.h

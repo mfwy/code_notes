@@ -20,6 +20,7 @@
 #include<netinet/in.h>
 #include <arpa/inet.h>
 #include<AddServer.h>
+#include<templateapp.h>
 
 using namespace std;
 using namespace cv;
@@ -29,23 +30,46 @@ int callback(int a,int b)
     cout << a + b << endl;
     return 2*a + b;
 }
-
+template<typename T>
+T func(T a,T b)
+{
+    T c = a + b;
+    cout << c << endl;
+    return c;
+}
 int main()
 {
-    AddServer s1;
-    if(s1.bind_flag!=-1)
+    try
     {
-        cout << "Binding succeed!!!" << endl;
-
-        if(s1.Server_wait())
-        {
-            int flag=s1.Server_connect();
-            if(flag)
-            {
-                s1.process(callback);
-            }
-        }
+        int a1 = 8, a2 = 9;
+        double b1 = 12.4, b2 = 23.8;
+        string c1("hello "), c2("world");
+        Aclass<string> A1("good "), A2("moring!!!");
+        func(a1, a2);
+        func(b1, b2);
+        func(c1, c2);
+        func(A1, A2);
     }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+
+
+    // AddServer s1;
+    // if(s1.bind_flag!=-1)
+    // {
+    //     cout << "Binding succeed!!!" << endl;
+
+    //     if(s1.Server_wait())
+    //     {
+    //         int flag=s1.Server_connect();
+    //         if(flag)
+    //         {
+    //             s1.process(callback);
+    //         }
+    //     }
+    // }
     
     
     // task1:Json文件

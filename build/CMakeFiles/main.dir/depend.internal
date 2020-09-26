@@ -9,6 +9,7 @@ CMakeFiles/main.dir/src/main.cpp.o
  ../include/Param.h
  ../include/config.h
  ../include/ser.h
+ ../include/templateapp.h
  /home/junlinz/Documents/Pangolin/build/src/include/pangolin/config.h
  /home/junlinz/Documents/Pangolin/include/pangolin/compat/type_traits.h
  /home/junlinz/Documents/Pangolin/include/pangolin/display/attach.h
