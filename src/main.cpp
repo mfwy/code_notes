@@ -37,25 +37,42 @@ T func(T a,T b)
     cout << c << endl;
     return c;
 }
+void var_func(int cnt, ...)
+{
+    va_list ap;
+    va_start(ap, cnt);
+    int i = 0;
+    while (i < cnt)
+    {
+        cout<<va_arg(ap,int)<<endl;
+        i++;
+    }
+
+}
 int main()
 {
-    try
-    {
-        int a1 = 8, a2 = 9;
-        double b1 = 12.4, b2 = 23.8;
-        string c1("hello "), c2("world");
-        Aclass<string> A1("good "), A2("moring!!!");
-        func(a1, a2);
-        func(b1, b2);
-        func(c1, c2);
-        func(A1, A2);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
 
+    var_func(5, 1, 4, 5, 6, 4);
+    //**********************
+    //template
+    // try
+    // {
+    //     int a1 = 8, a2 = 9;
+    //     double b1 = 12.4, b2 = 23.8;
+    //     string c1("hello "), c2("world");
+    //     Aclass<string> A1("good "), A2("moring!!!");
+    //     func(a1, a2);
+    //     func(b1, b2);
+    //     func(c1, c2);
+    //     func(A1, A2);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
 
+    //****************************
+    //socket
     // AddServer s1;
     // if(s1.bind_flag!=-1)
     // {

@@ -53,3 +53,42 @@ ser.h头文件包含
 >//任务    
 >end=std::chrono::system_clock::now();  
 >std::chrono::duration<double> Dura=end - start;//时间段  
+
+### 6.template模板,函数模板,类模板,函数模板作为友元函数的问题
+(1)template<typename T> ret_type fun_name(arg_type);
+(2)template<class T> class class_name;
+(3)重载操作符<<  >> 必须是友元函数,具有ostream& operator<<(ostream& output,classs_type& c);的形式
+(4)函数模板作为友元函数:  
+a.在类内定义的情况  
+>   friend ostream& operator<< (ostream &output, Aclass &c)  
+>    {
+>
+>   }  
+
+b.在类外定义的情况  
+>需提前声明:  
+template \<typename T>  
+class Aclass;  
+template \<typename T>  
+ostream& operator<< (ostream &output, Aclass<T> &c);  
+>类内声明(加了\<T>):  
+friend ostream& operator<< <T>(ostream &output, Aclass &c);  
+>内外定义:  
+>template<typename T>  
+ostream& operator<<(ostream& output,Aclass<T> &c)
+
+### 7. 可变参数(...) va_list va_start va_arg va_end(都是宏)
+VA_LIST的用法：   
+（1）首先在函数里定义一具VA_LIST型的变量，这个变量是指向参数的指针；   
+（2）然后用VA_START宏初始化变量刚定义的VA_LIST变量；   
+（3）然后用VA_ARG返回可变的参数，VA_ARG的第二个参数是你要返回的参数的类型（如果函数有多个可变参数的，依次调用VA_ARG获取各个参数）；   
+（4）最后用VA_END宏结束可变参数的获取。  
+> typedef char * va_list;       
+> // TC中定义为void*  
+>#define _INTSIZEOF(n)  ((sizeof(n)+sizeof(int)-1)&~(sizeof(int) - 1))  
+ //为了满足需要内存对齐的系统  
+>#define va_start(ap,v)  ( ap = (va_list)&v + _INTSIZEOF(v) )  
+//ap指向第一个变参的位置，即将第一个变参的地址赋予ap  
+>#define va_arg(ap,t)  ( *(t *)((ap += _INTSIZEOF(t)) - _INTSIZEOF(t)) )  
+//获取变参的具体内容，t为变参的类型，如有多个参数，则通过移动ap的指针来获得变参的地址，从而获得内容 
+>#define va_end(ap) ( ap = (va_list)0 )   //清空va_list，即结束变参的获取
