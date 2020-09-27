@@ -6,16 +6,16 @@
 #include<unistd.h>
 #include<stdlib.h>
 #include<sstream>
-
+#include<csignal>
+#include<functional>
 typedef int (*pfun)(int, int);
 
 using namespace std;
+using namespace std::placeholders;  
 
 class AddServer
 {
 private:
-    int sock_server;
-    int sock_client;
     string ip;
     int port;
 
@@ -28,6 +28,8 @@ private:
     int b;
     int sum;
 public:
+    static int sock_server;
+    static int sock_client;
     int bind_flag;
     int listen_flag;
     int accept_flag;
@@ -38,10 +40,21 @@ public:
     bool Server_wait();
     bool Server_connect();
     void process(pfun callback);
-};
+    static void handler(int signum);
 
+};
+int AddServer::sock_server=0;
+int AddServer::sock_client = 0;
+void AddServer::handler( int signum)
+{
+    cout << "Interupt!" << endl;
+    close(sock_client);
+    close(sock_server);
+}
 AddServer::AddServer()
 {
+    signal(SIGINT, handler);
+
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(8888);
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -66,6 +79,7 @@ AddServer::AddServer()
             }
         } while (bind_flag == -1);
     }
+
 }
 
 AddServer::~AddServer()

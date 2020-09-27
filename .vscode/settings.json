@@ -52,6 +52,7 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "string": "cpp",
-        "eigen": "cpp"
+        "eigen": "cpp",
+        "csignal": "cpp"
     }
 }

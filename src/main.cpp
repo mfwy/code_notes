@@ -21,9 +21,12 @@
 #include <arpa/inet.h>
 #include<AddServer.h>
 #include<templateapp.h>
-
+#include<functional>
+#include<signal.h>
 using namespace std;
 using namespace cv;
+
+using namespace std::placeholders;
 
 int callback(int a,int b)
 {
@@ -49,11 +52,13 @@ void var_func(int cnt, ...)
     }
 
 }
+
 int main()
 {
-
-    var_func(5, 1, 4, 5, 6, 4);
-    //**********************
+    //******************************
+    //va_list
+    // var_func(5, 1, 4, 5, 6, 4);
+    //********************************
     //template
     // try
     // {
@@ -73,20 +78,23 @@ int main()
 
     //****************************
     //socket
-    // AddServer s1;
-    // if(s1.bind_flag!=-1)
-    // {
-    //     cout << "Binding succeed!!!" << endl;
 
-    //     if(s1.Server_wait())
-    //     {
-    //         int flag=s1.Server_connect();
-    //         if(flag)
-    //         {
-    //             s1.process(callback);
-    //         }
-    //     }
-    // }
+    AddServer s1;
+    // sighandler_t c = std::bind(&handler, s1, _1);
+    // signal(SIGINT, c);
+    if(s1.bind_flag!=-1)
+    {
+        cout << "Binding succeed!!!" << endl;
+
+        if(s1.Server_wait())
+        {
+            int flag=s1.Server_connect();
+            if(flag)
+            {
+                s1.process(callback);
+            }
+        }
+    }
     
     
     // task1:Json文件
